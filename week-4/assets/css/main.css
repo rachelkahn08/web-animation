@@ -1,0 +1,377 @@
+html, body {
+	height:100%;
+	width: 100%;
+	background: black;
+	font-size: 16px;
+}
+
+* {
+	background-repeat: no-repeat;
+	background-size: 100%, 100%;
+	overflow: hidden;
+}
+
+.background {
+	position: relative;
+	left:50%;
+	top:50%;
+	width: 24.7222221em;
+	height: 37.027777em;
+	transform: translate(-50%, -50%);
+	background:#ede9dd;
+}
+
+.spacedude {
+	width:  0.6388888em;
+	height: 0.9444444em;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 3.6311111em;
+	z-index:6;
+	background-image: url(../img/spacedude.png);
+	animation: spacedude-orbit 10s;
+	animation-timing-function: linear;
+}
+
+.moon {
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 4.583333em;
+	position: absolute;
+	z-index:5;
+	background-image: url(../img/moon.png);
+}
+
+
+.earth-container {
+	position: absolute;
+	height: 16.555555em;
+	width: 16.555555em;
+	top: 13.77777em;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index:0;
+	border-radius: 50%;
+	border-style: none;
+	overflow: hidden;
+	background-color: #0d3043;
+}
+
+
+.planet {
+	position: relative;
+	height: 100%;
+	width: 100%
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index:1;
+	background-image: url(../img/planet.png);
+	background-repeat: no-repeat;
+	animation: planet-over 3s;
+
+}
+
+.rocket {
+	position: absolute;
+	transform: translateX(-50%);
+	width: 0.6944444em;
+	height: 10em;
+	left: 50.1%;
+	top: 4.861111em;
+	z-index:4;
+	background-image: url(../img/rocket.png);
+	animation: rocket-up 13s;
+}
+
+.exhaust {
+	position: absolute;
+	transform: translate(-50%, 0);
+	height: 8.25em;
+	width: 7.66em;
+	left: 50%;
+	top: 8.472222em;
+	z-index:3;
+	background-repeat: no-repeat;
+	background-image: url(../img/exhaust.png);
+	animation: exhaust-up 13s;
+}
+
+
+.skyline {
+	position: absolute;
+	left: 49%;
+	top: 11.416666em;
+	transform: translate(-50%);
+	height: 5.0277777em;
+	width: 12.611111em;
+	background-image: url(../img/skyline.png);
+	animation: skyline-up 6s;
+	z-index: 2;
+}
+
+
+
+.title {
+	width: 8em;
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	top: 33em;
+	transform: translateX(-50%);
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   	font-weight:700;
+   	color:#071822;
+   	text-align: center;
+}
+
+h1 {
+	position: relative;
+	width: 100%;
+	padding-bottom: 0.44444444em;
+	margin-bottom: -1em;
+	font-size: 0.4444444em;
+	letter-spacing: .85em;
+	border-bottom: solid 0.013888em #071822;
+}
+
+p {
+	position: relative;
+	font-size: 0.25em;
+	display: inline;
+	letter-spacing: 3px;
+}
+
+#b {
+	margin-top: -1em;
+}
+
+@-webkit-keyframes skyline-up {
+	0% { top: 16.444444em; }
+	50% { top: 16.444444em; }
+	100% { top: 11.416666em; }
+}
+
+@-webkit-keyframes rocket-up {
+	0% { top: 100%; left: 50.1%; transform: translateX(-50%);}
+	55% { top: 100%; }
+	70% { top: 13.2em; }
+	72.9% { top: 13.2em; }
+	73% { transform: translate(-50%); }
+	76% { transform: translate(-50%); }
+	79% { transform: translate(-50%); }
+	82% { transform: translate(-50%); }
+	85% { transform: translate(-50%); }
+	88% { transform: translate(-50%); }
+	91% { transform: translate(-50%); }
+	94% { transform: translate(-50%); }
+	97% { transform: translate(-50%); }
+	100% { top: 4.8611111em; left:50.1%; transform: translateX(-50%);}
+}
+@-webkit-keyframes exhaust-up {
+	0% { 
+		top: 100%; 
+		transform: translate(-50% 0);
+		left: 50%;
+	}
+
+	73% { top: 100%; }
+	75% { transform: translate(-50%,  -1.5%); }
+	77% { transform: translate(-50%,  3.5%); }
+	79% { transform: translate(-50%, -1.5%); }
+	82% { transform: translate(-50%, 3.5%); }
+	85% { transform: translate(-50%,  -1.5%); }
+	89% { transform: translate(-50%, 3.5%); }
+	95% { transform: translate(-50%, -1.5%); }
+	100% { top: 8.4722222em; left: 50%; transform: translate(-50%, 0) rotateZ(0deg);}
+}
+
+@-webkit-keyframes planet-over {
+	0% { opacity: 0; transform: translateX(-150%); }
+	50% { opacity: .2;}
+	100% { opacity: 1; transform: translateX(-50%);}
+}
+
+@-webkit-keyframes spacedude-orbit {
+	
+	0%, 100% {
+	}
+	2.85714285714% {
+		left: 13.4722222222em;
+		top: 4.52777777778em;
+	}
+	5.71428571429% {
+		left: 13.6388888889em;
+		top: 5.08333333333em;
+	} 
+	
+	8.57142857143% {
+		left: 13.2222222222em;
+		top: 6.11111111111em;
+	
+	}
+	11.4285714286% {
+		left: 12.4444444444em;
+		top: 7.02777777778em;
+	 
+	}
+	14.2857142857% {
+		left:10.6666666667em;
+		top: 8.88888888889em; 
+	 
+	 
+	}
+	17.1428571429% {
+		left:8.63888888889em;
+		top: 11.1388888889em;
+	 
+	}
+	20% {
+		left:6.36111111111em;
+		top: 14.0277777778em;
+	}
+	
+	22.85714285714% {
+		left: 4.72222222222em;
+		top:16.6111111111em;
+	}
+	
+	25.71428571429% {
+		left: 3.41666666667em;
+		top:19.75em;
+	}
+	
+	28.57142857143% {
+		left: 3.11111111111em;
+		top:21.8333333333em;
+	}
+	
+	31.4285714286% {
+		left: 3.38888888889em;
+		top:23.8611111111em;
+	}
+	
+	34.2857142857% {
+		left: 4.27777777778em;
+		top:26.2222222222em;
+	}
+	
+	37.1428571429% {
+		left: 6.27777777778em;
+		top:28.75em;
+	}
+	
+	40%  {	
+		left:7.44444444444em;
+		top:29.5555555556em;
+	}
+	
+	42.85714285714% {
+		left:9.08333333333em;
+		top: 30.4166666667em;
+	}
+	
+	45.71428571429% {
+		left:10.4722222222em;
+		top:30.8333333333em;
+	}
+
+	
+	48.57142857143% {
+		left:12.3888888889em;
+		top: 31.0555555556;
+	}
+	
+	51.4285714286% {
+		left:14.4166666667em;
+		top:30.8333333333em;
+	}
+	
+	54.2857142857% {
+		left: 15.8055555556em;
+		top: 30.4166666667em;
+	}
+
+	57.1428571429% {
+		left:15.8055555556em;
+		top: 29.6111111111em;
+	}
+
+	60% {
+		left:17.4444444444em;
+		top: 29.5833333333em;
+	}
+	
+	62.85714285714% {
+		left: 20.5833333333em;
+		top: 26.2222222222em;
+	}
+	
+	65.71428571429% {
+		left: 21.4722222222em;
+		top:23.8611111111em;
+	}
+	/*773/859*/
+	68.57142857143% {
+		left: 21.7222222222em;
+		top: 21.7222222222em;
+	}
+	/*782/785*/
+	71.4285714286% {
+		left:21.4444444444em;
+		top:19.75em;
+	}
+	/*773/710*/
+	74.2857142857% {
+		left: 20.1388888889em;
+		top:16.6111111111em;
+	}
+	/*725/597*/
+	77.1428571429% {
+		left:18.5277777778em;
+		top: 14.0277777778em;
+	}
+	/*667/505*/
+	80% {
+		left: 16.2777777778em;
+		top:11.1388888889em;
+	}
+	/*585/402*/
+	82.85714285714% {
+		left: 14.1944444444em;
+		top: 8.88888888889em;
+	}
+	/*513/320*/
+	85.71428571429% {
+		left:12.4444444444em;
+		top: 7.02777777778em;
+	}
+	
+	88.57142857143% {
+		left:11.6666666667em;
+		top: 6.11111111111em;
+	}
+	/*419/221*/
+	91.4285714286% {
+		left:11.3055555556em;
+		top: 5.55555555556em;
+	}
+	/*408/200*/
+	94.2857142857% {
+		top: 5.08333333333em;
+		left: 11.1944444444em;
+	}
+	/*403/183*/
+	97.1428571429% {
+		top: 4.52777777778em;
+		left: 11.4166666667em;
+	}
+	/*411/163*/
+}
+
+628/1065
+
