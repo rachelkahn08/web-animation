@@ -31,8 +31,8 @@ html, body {
 	z-index:6;
 	background-image: url(../img/spacedude.png);
 	animation: spacedude-orbit-X, spacedude-orbit-Y, spacedude-orbit-rotate;
-	animation-duration: 1s;
-	animation-iteration-count: 13;
+	animation-duration: 6.5s;
+	animation-iteration-count: 2;
 	animation-timing-function: ease-in-out;
 }
 
